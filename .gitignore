@@ -1,0 +1,6 @@
+.clangd
+build/
+
+stm32.cbuild-idx.yml
+stm32.cbuild-pack.yml
+stm32.cbuild-set.yml
