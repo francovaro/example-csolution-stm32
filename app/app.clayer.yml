@@ -1,0 +1,8 @@
+layer:
+  type: Application
+  description: Application files and configurations
+
+  groups:
+    - group: Application
+      files:
+        - file: ./src/main.cpp

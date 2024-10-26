@@ -1,0 +1,15 @@
+# CMSIS Build Audit File generated on 2024-10-26T20:58:18
+
+# Project Description File: C:/work/edge_impulse/st/example-csolution-stm32f466re/build/Nucleo_STM32F4466/GCC/Debug/stm32/stm32.Debug+Nucleo_STM32F4466.cprj
+
+# Toolchain Configuration File: C:/work/cmsis-toolbox/etc/GCC.10.3.1.cmake
+
+# Package: ARM::CMSIS@6.0.0
+  Location: C:\Users\franc\AppData\Local\Arm\Packs/ARM/CMSIS/6.0.0/
+
+  * Component: ARM::CMSIS:CORE@6.0.0
+
+# Package: Keil::STM32F4xx_DFP@3.0.0
+  Location: C:\Users\franc\AppData\Local\Arm\Packs/Keil/STM32F4xx_DFP/3.0.0/
+
+  * Component: Keil::Device:CubeMX@1.0.0

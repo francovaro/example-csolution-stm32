@@ -1,0 +1,57 @@
+solution:
+  created-for: cmsis-toobox@2.6.0
+  description: Project skeleton for STM32
+
+  cdefault:
+  compiler: GCC
+
+  misc:
+    - for-compiler: GCC
+      C:
+        - -std=c99
+        - -flax-vector-conversions
+        - -mthumb
+        - -fdata-sections
+      CPP:
+        - -std=c++11
+        - -Og
+        - -fdata-sections
+        - -mthumb
+        - -fno-rtti
+        - -fno-unwind-tables
+      Link:
+        - --specs=nano.specs
+        - --specs=rdimon.specs
+        - --entry=Reset_Handler
+        - -Wl,-Map=.map,--cref,-print-memory-usage,--gc-sections
+
+  # List the packs that define the device and/or board
+  packs:
+    - pack: ARM::CMSIS@6.0.0
+    - pack: Keil::STM32F4xx_DFP@>=3.0.0
+
+  target-types:
+    - type: Nucleo_STM32F4466
+      device: STMicroelectronics::STM32F446RETx
+      #device: STMicroelectronics::STM32F446RE
+      variables:
+        - Target-Layer: ./target/nucleo_f466re/target.clayer.yml
+
+  output-dirs:
+    cprjdir: ./build/$TargetType$/$Compiler$/$BuildType$/$Project$
+    intdir:  ./build/$TargetType$/$Compiler$/$BuildType$/$Project$/intdir
+    outdir:  ./build/$TargetType$/$Compiler$/$BuildType$/$Project$/outdir
+
+
+  build-types:                                # defines toolchain options for 'debug' and 'release'
+    - type: Debug
+      debug: on
+      optimize: none
+
+    - type: Release
+      debug: off
+      optimize: speed
+
+  # List related projects
+  projects:
+    - project: ./stm32.cproject.yml

@@ -1,0 +1,5 @@
+load STM32F446RETx
+project name STM32CubeMX
+project toolchain "MDK-ARM V5"
+project path "C:\work\edge_impulse\st\example-csolution-stm32f466re\STM32CubeMX\Nucleo_STM32F4466"
+SetCopyLibrary "copy only"

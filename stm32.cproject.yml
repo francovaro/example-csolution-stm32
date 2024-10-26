@@ -1,0 +1,11 @@
+project:
+
+  layers:
+    - layer: ./app/app.clayer.yml
+
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:CubeMX
+
+
+

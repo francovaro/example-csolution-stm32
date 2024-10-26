@@ -1,0 +1,93 @@
+build-gen:
+  generated-by: csolution version 2.2.1
+  current-generator:
+    id: CubeMX
+  solution: C:/work/edge_impulse/st/example-csolution-stm32f466re/stm32.csolution.yml
+  project: C:/work/edge_impulse/st/example-csolution-stm32f466re/stm32.cproject.yml
+  context: stm32.Debug+Nucleo_STM32F4466
+  compiler: GCC
+  device: STMicroelectronics::STM32F446RETx
+  device-pack: Keil::STM32F4xx_DFP@3.0.0
+  processor:
+    endian: little
+    fpu: sp
+    core: Cortex-M4
+  packs:
+    - pack: ARM::CMSIS@6.0.0
+      path: C:/Users/franc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0
+    - pack: Keil::STM32F4xx_DFP@3.0.0
+      path: C:/Users/franc/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/3.0.0
+  optimize: none
+  debug: on
+  misc:
+    C:
+      - -std=c99
+      - -flax-vector-conversions
+      - -mthumb
+      - -fdata-sections
+      - -std=gnu11
+      - -masm-syntax-unified
+      - -fomit-frame-pointer
+      - -ffunction-sections
+    CPP:
+      - -std=c++11
+      - -Og
+      - -fdata-sections
+      - -mthumb
+      - -fno-rtti
+      - -fno-unwind-tables
+      - -masm-syntax-unified
+      - -fomit-frame-pointer
+      - -ffunction-sections
+    Link:
+      - --specs=nano.specs
+      - --specs=rdimon.specs
+      - --entry=Reset_Handler
+      - -Wl,-Map=.map,--cref,-print-memory-usage,--gc-sections
+      - -Wl,-Map=./outdir/stm32.elf.map
+      - -Wl,--gc-sections
+  define:
+    - STM32F446xx
+    - _RTE_
+  add-path:
+    - C:/work/edge_impulse/st/example-csolution-stm32f466re/RTE/_Debug_Nucleo_STM32F4466
+    - C:/Users/franc/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  output-dirs:
+    intdir: C:/work/edge_impulse/st/example-csolution-stm32f466re/build/Nucleo_STM32F4466/GCC/Debug/stm32/intdir
+    outdir: C:/work/edge_impulse/st/example-csolution-stm32f466re/build/Nucleo_STM32F4466/GCC/Debug/stm32/outdir
+    rtedir: C:/work/edge_impulse/st/example-csolution-stm32f466re/RTE
+  output:
+    - type: elf
+      file: stm32.elf
+  components:
+    - component: ARM::CMSIS:CORE@6.0.0
+      condition: ARMv6_7_8-M Device
+      from-pack: ARM::CMSIS@6.0.0
+      selected-by: ARM::CMSIS:CORE
+    - component: Keil::Device:CubeMX@1.0.0
+      condition: STM32F4 CMSIS
+      from-pack: Keil::STM32F4xx_DFP@3.0.0
+      selected-by: Device:CubeMX
+  linker:
+    script: C:/work/edge_impulse/st/example-csolution-stm32f466re/RTE/Device/STM32F446RETx/gcc_linker_script.ld.src
+    regions: C:/work/edge_impulse/st/example-csolution-stm32f466re/RTE/Device/STM32F446RETx/regions_STM32F446RETx.h
+  groups:
+    - group: Application
+      files:
+        - file: ../../../../../app/src/main.cpp
+          category: sourceCpp
+  constructed-files:
+    - file: C:/work/edge_impulse/st/example-csolution-stm32f466re/RTE/_Debug_Nucleo_STM32F4466/RTE_Components.h
+      category: header
+  licenses:
+    - license: <unknown>
+      license-agreement: ${CMSIS_PACK_ROOT}/ARM/CMSIS/6.0.0/LICENSE
+      packs:
+        - pack: ARM::CMSIS@6.0.0
+      components:
+        - component: ARM::CMSIS:CORE@6.0.0
+    - license: Apache-2.0
+      packs:
+        - pack: Keil::STM32F4xx_DFP@3.0.0
+      components:
+        - component: Keil::Device:CubeMX@1.0.0
