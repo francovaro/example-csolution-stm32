@@ -1,0 +1,6 @@
+layer:
+  type: Target
+  description: STM32F401RE Nucleo target components and files
+
+  packs:
+  - pack: Keil::NUCLEO-F401RE_BSP@1.0.0

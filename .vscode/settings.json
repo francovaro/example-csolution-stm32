@@ -1,0 +1,5 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=c:\\work\\edge_impulse\\st\\example-csolution-stm32\\build\\Nucleo_STM32F4466\\GCC\\Debug\\stm32\\outdir"
+    ]
+}

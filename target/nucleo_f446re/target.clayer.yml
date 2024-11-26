@@ -1,0 +1,6 @@
+layer:
+  type: Target
+  description: STM32F466RE Nucleo target components and files
+
+  packs:
+  - pack: Keil::NUCLEO-F446RE_BSP
