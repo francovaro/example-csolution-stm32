@@ -36,4 +36,3 @@ solution:
   # List related projects
   projects:
     - project: ./stm32.cproject.yml
-  compiler: GCC
