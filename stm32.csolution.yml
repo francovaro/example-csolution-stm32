@@ -2,7 +2,14 @@ solution:
   created-for: cmsis-toobox@2.6.1
   description: Project skeleton for STM32
 
-  # Define the toolchain
+  cdefault:
+
+  # List of tested compilers that can be selected
+  select-compiler:
+    - compiler: AC6
+    - compiler: GCC
+    - compiler: IAR
+
   compiler: GCC
 
   # List the packs that define the device and/or board
@@ -15,8 +22,8 @@ solution:
     - type: Nucleo_STM32F4466
       board: STMicroelectronics::NUCLEO-F446RE:Rev.C
       device: STMicroelectronics::STM32F446RETx
-      variables:
-        - Target-Layer: ./target/nucleo_f466re/target.clayer.yml
+     # variables:
+     #   - Target-Layer: ./target/nucleo_f466re/target.clayer.yml
 
   build-types:
     # defines toolchain options for 'debug' and 'release'
@@ -27,11 +34,6 @@ solution:
     - type: Release
       debug: off
       optimize: speed
-
-  output-dirs:
-    cprjdir: ./build/$TargetType$/$Compiler$/$BuildType$/$Project$
-    intdir: ./build/$TargetType$/$Compiler$/$BuildType$/$Project$/intdir
-    outdir: ./build/$TargetType$/$Compiler$/$BuildType$/$Project$/outdir
 
   # List related projects
   projects:

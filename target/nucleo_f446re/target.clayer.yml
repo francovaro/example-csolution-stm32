@@ -6,6 +6,7 @@ layer:
   - pack: Keil::NUCLEO-F446RE_BSP
 
   linker:
-    - for-compiler: GCC
-      regions: RTE/Device/$Dname$/regions_$Dname$.h
-      link-script: RTE/Device/$Dname$/STM32F446RETx_FLASH.ld
+    - regions: RTE\Device\STM32F446RETx\regions_NUCLEO-F446RE.h
+      script: STM32CubeMX\STM32F446RETx\STM32CubeMX\STM32CubeIDE\STM32F446RETX_FLASH.ld
+      for-compiler: GCC
+

@@ -7,5 +7,7 @@ project:
     - component: ARM::CMSIS:CORE
     - component: Device:CubeMX
 
-
-
+  linker:
+    - regions: RTE\Device\STM32F446RETx\regions_NUCLEO-F446RE.h
+      script: STM32CubeMX\Nucleo_STM32F4466\STM32CubeMX\STM32CubeIDE\STM32F446RETX_FLASH.ld
+      for-compiler: GCC

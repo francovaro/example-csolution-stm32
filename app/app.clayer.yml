@@ -5,4 +5,4 @@ layer:
   groups:
     - group: Application
       files:
-        - file: ./src/main.cpp
+        - file: ./src/app.cpp
